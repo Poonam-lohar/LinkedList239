@@ -30,5 +30,19 @@ public class LinkedListMain {
             System.out.println("Last Element popped.."+ popLastElement);
         linkedList1.display();
 
+        LinkedList<Integer> linkedList2 = new LinkedList<>();
+        linkedList2.findNode(30);
+        linkedList2.append(56);
+        linkedList2.append(30);
+        linkedList2.append(70);
+        linkedList2.display();
+
+        Node<Integer> findElement = linkedList2.findNode(30);
+        if (findElement == null)
+            System.out.println("Element not Found..");
+        else
+            System.out.println("Element Found...");
+        System.out.println(findElement);
+
     }
 }

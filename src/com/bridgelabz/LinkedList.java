@@ -41,12 +41,13 @@ public class LinkedList<E> {
     public E pop() {
         if (head == null) {
             return null;
-        }else {
+        } else {
             E popData = head.key;
             head = head.next;
             return popData;
         }
     }
+
     public E popLast() {
         if (head == null) {
             return null;
@@ -61,5 +62,17 @@ public class LinkedList<E> {
             return popElement;
         }
     }
-}
+
+    public Node<E> findNode(E value) {
+        if (head == null)
+            return null;
+        Node<E> temp = head;
+        while (temp != null) {
+            if (temp.key == value)
+                return temp;
+                temp = temp.next;
+            }
+            return null;
+        }
+    }
 
