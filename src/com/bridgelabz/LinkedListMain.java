@@ -10,12 +10,15 @@ public class LinkedListMain {
         linkedList.push(56);
         linkedList.display();
 
+        System.out.println();
         Integer popData = linkedList.pop();
         if (popData == null) {
             System.out.println("Empty linked list");
         } else
             System.out.println("First Element Popped " + popData);
-            linkedList.display();
+        linkedList.display();
+
+        System.out.println();
 
         LinkedList<Integer> linkedList1 = new LinkedList<>();
         linkedList1.append(56);
@@ -27,7 +30,7 @@ public class LinkedListMain {
         if (popLastElement == null)
             System.out.println("Empty linked list..");
         else
-            System.out.println("Last Element popped.."+ popLastElement);
+            System.out.println("Last Element popped.." + popLastElement);
         linkedList1.display();
 
         LinkedList<Integer> linkedList2 = new LinkedList<>();
@@ -37,6 +40,8 @@ public class LinkedListMain {
         linkedList2.append(70);
         linkedList2.display();
 
+        System.out.println();
+
         Node<Integer> findElement = linkedList2.findNode(30);
         if (findElement == null)
             System.out.println("Element not Found..");
@@ -44,14 +49,22 @@ public class LinkedListMain {
             System.out.println("Element Found...");
         System.out.println(findElement);
 
+        System.out.println();
+
         LinkedList<Integer> linkedList3 = new LinkedList<>();
         linkedList3.append(56);
         linkedList3.append(30);
         linkedList3.append(70);
         linkedList3.display();
-        linkedList3.insertAfter(30,40);
+        linkedList3.insertAfter(30, 40);
         linkedList3.display();
 
+        System.out.println();
 
+        linkedList3.delete(40);
+        linkedList3.display();
+        System.out.println("Size of List: "+ linkedList3.size());
+        linkedList3.display();
     }
 }
+

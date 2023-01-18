@@ -85,7 +85,35 @@ public class LinkedList<E> {
             Node<E> nextNode = searchedNode.next;
             searchedNode.next = newNode;
             newNode.next = nextNode;
+            System.out.println("Inserted data: " +data);
         }
+    }
+
+    public void delete(E data) {
+        if (head == null) {
+            System.out.println("Empty linked list....");
+            return;
+        }
+        Node<E> node = head;
+        while (node != null) {
+            if (node.next.key == data) {
+                node.next = node.next.next;
+               System.out.println( "Deleted Element: " + data);
+                return;
+            }
+            node = node.next;
+        }
+        System.out.println("Not found");
+    }
+
+    public int size() {
+        int count =0;
+        Node<E> node = head;
+        while (node != null) {
+            node = node.next;
+            count++;
+        }
+        return count;
     }
 }
 
