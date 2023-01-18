@@ -23,5 +23,12 @@ public class LinkedListMain {
         linkedList1.append(70);
         linkedList1.display();
 
+        Integer popLastElement = linkedList1.popLast();
+        if (popLastElement == null)
+            System.out.println("Empty linked list..");
+        else
+            System.out.println("Last Element popped.."+ popLastElement);
+        linkedList1.display();
+
     }
 }
