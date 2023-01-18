@@ -70,9 +70,22 @@ public class LinkedList<E> {
         while (temp != null) {
             if (temp.key == value)
                 return temp;
-                temp = temp.next;
-            }
-            return null;
+            temp = temp.next;
+        }
+        return null;
+    }
+
+
+    public void insertAfter(E searchData, E data) {
+        Node<E> searchedNode = findNode(searchData);
+        if (searchedNode == null) {
+            System.out.println("Element not find...");
+        } else {
+            Node<E> newNode = new Node(data);
+            Node<E> nextNode = searchedNode.next;
+            searchedNode.next = newNode;
+            newNode.next = nextNode;
         }
     }
+}
 

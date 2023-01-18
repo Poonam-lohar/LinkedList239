@@ -44,5 +44,14 @@ public class LinkedListMain {
             System.out.println("Element Found...");
         System.out.println(findElement);
 
+        LinkedList<Integer> linkedList3 = new LinkedList<>();
+        linkedList3.append(56);
+        linkedList3.append(30);
+        linkedList3.append(70);
+        linkedList3.display();
+        linkedList3.insertAfter(30,40);
+        linkedList3.display();
+
+
     }
 }
