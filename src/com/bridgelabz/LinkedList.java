@@ -15,6 +15,8 @@ public class LinkedList<E> {
             newNode.next = head;
             head = newNode;
         }
+        
+        
 
 
     }
@@ -26,5 +28,16 @@ public class LinkedList<E> {
             temp = temp.next;
         }
         System.out.println();
+    }
+
+    public void append(E key) {
+     Node<E> newNode = new Node(key);
+     if (head == null) {
+         head = newNode;
+         tail = newNode;
+     } else {
+         tail.next = newNode;
+         tail = newNode;
+     }
     }
 }
