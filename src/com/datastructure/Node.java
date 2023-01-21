@@ -2,8 +2,8 @@ package com.datastructure;
 
 public class Node<E> {
 
-    E key;
-    Node<E> next;
+    public E key;
+    public Node<E> next;
 
     public Node(E key) {
         this.key = key;
