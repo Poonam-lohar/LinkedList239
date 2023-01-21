@@ -85,7 +85,7 @@ public class LinkedList<E> {
             Node<E> nextNode = searchedNode.next;
             searchedNode.next = newNode;
             newNode.next = nextNode;
-            System.out.println("Inserted data: " +data);
+            System.out.println("Inserted data: " + data);
         }
     }
 
@@ -98,7 +98,7 @@ public class LinkedList<E> {
         while (node != null) {
             if (node.next.key == data) {
                 node.next = node.next.next;
-               System.out.println( "Deleted Element: " + data);
+                System.out.println("Deleted Element: " + data);
                 return;
             }
             node = node.next;
@@ -107,7 +107,7 @@ public class LinkedList<E> {
     }
 
     public int size() {
-        int count =0;
+        int count = 0;
         Node<E> node = head;
         while (node != null) {
             node = node.next;
@@ -116,4 +116,5 @@ public class LinkedList<E> {
         return count;
     }
 }
+
 

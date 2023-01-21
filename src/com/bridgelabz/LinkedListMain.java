@@ -65,6 +65,8 @@ public class LinkedListMain {
         linkedList3.display();
         System.out.println("Size of List: "+ linkedList3.size());
         linkedList3.display();
+
+        //linkedList3.sort();
     }
 }
 
